@@ -15,11 +15,11 @@ pip install -r requirements.txt
 Скопируйте файл main.py
 
 Для работы необходима регистрация на сайте bit.ly
-В папке с программой нужно создать файл окружения bit.env, куда необходимо поместить строчку с ключом bitly token,
-взятую из профиля на сайте bit.ly:
+В папке с программой нужно создать файл окружения bit.env, куда необходимо поместить строчку с ключом bitly OAuth token:
 ```
 BITLY_TOKEN = '<Поместите ваш token сюда>'
 ```
+[Руководство по получению OAuth token](https://support.bitly.com/hc/en-us/articles/230647907-How-do-I-generate-an-OAuth-access-token-for-the-Bitly-API-)
 
 ### Запуск программы
 
