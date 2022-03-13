@@ -35,18 +35,14 @@ def remove_protocol(url):
     return f'{parsed_url.netloc}{parsed_url.path}'
 
 
-def url_from_cmdline():
-    parser = argparse.ArgumentParser()
-    parser.add_argument('url', help='URL для анализа')
-    args = parser.parse_args()
-    return args.url
-
-
 if __name__ == '__main__':
     env_path = Path('.') / 'bit.env'
     load_dotenv(dotenv_path=env_path)
     token = os.environ['BITLY_TOKEN']
-    url = url_from_cmdline()
+    parser = argparse.ArgumentParser()
+    parser.add_argument('url', help='URL для анализа')
+    args = parser.parse_args()    
+    url = args.url
     try:
         if is_bitlink(token, remove_protocol(url)):
             print(url, 'is a correct bitlink')
