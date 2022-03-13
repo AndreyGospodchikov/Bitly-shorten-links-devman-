@@ -46,7 +46,6 @@ if __name__ == '__main__':
     env_path = Path('.') / 'bit.env'
     load_dotenv(dotenv_path=env_path)
     token = os.environ['BITLY_TOKEN']
-#   url = input('Input url: ')
     url = url_from_cmdline()
     try:
         if is_bitlink(token, remove_protocol(url)):
